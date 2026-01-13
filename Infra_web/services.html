@@ -1,0 +1,71 @@
+<!-- FILE: services.html -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- services.html - full descriptions and FAQ accordion -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Services — Square One Infra</title>
+    <meta name="description"
+        content="Services: Roads, Bridges, Drainage, Asset Maintenance. Learn about our process and warranty." />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">SQ1<span class="dot">.</span></a>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html" class="cta">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section container">
+        <h1>Our Services</h1>
+        <article>
+            <h2>Roads & Highways</h2>
+            <p>End-to-end highway delivery: pavement design, soil stabilization, resurfacing, intelligent lighting and
+                traffic management.</p>
+        </article>
+        <article>
+            <h2>Bridges & Structures</h2>
+            <p>Design, piling, precast elements and structural rehabilitation following national codes and third-party
+                checks.</p>
+        </article>
+        <article>
+            <h2>Water & Drainage</h2>
+            <p>Stormwater management, sewer interceptors, pump stations and long-term maintenance strategies to reduce
+                flood risk.</p>
+        </article>
+
+        <h2>FAQ</h2>
+        <div class="accordion" id="faq">
+            <button class="acc-toggle" aria-expanded="false">What is your project process?</button>
+            <div class="acc-panel">Site survey → design → approvals → procurement → construction → testing & handover.
+            </div>
+            <button class="acc-toggle" aria-expanded="false">Typical project timeline?</button>
+            <div class="acc-panel">Depends on scope — small works 3–6 months, highways 12–24+ months. We provide
+                timelines per proposal.</div>
+            <button class="acc-toggle" aria-expanded="false">Do you provide warranty?</button>
+            <div class="acc-panel">Yes, standard defects liability period and extended maintenance packages available.
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <a href="index.html" class="logo">SQ1<span class="dot">.</span></a>
+                <p class="muted">© <span id="year4"></span> Square One Infra</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

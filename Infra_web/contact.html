@@ -1,0 +1,66 @@
+<!-- FILE: contact.html -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- contact.html - lead capture form with AJAX submit to Formspree by default -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Contact — Square One Infra</title>
+    <meta name="description"
+        content="Contact Square One Infra to request a quote, site visit or proposal. We typically respond within 48 hours." />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">SQ1<span class="dot">.</span></a>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section container contact">
+        <h1>Contact Us</h1>
+        <p>Get a quote, ask about careers, or request a site visit. We typically respond within 48 hours.</p>
+
+        <form id="contactForm" action="https://formspree.io/f/{your-id}" method="POST" novalidate>
+            <label>Full name<input type="text" name="name" required placeholder="Your full name"></label>
+            <label>Email<input type="email" name="email" required placeholder="you@example.com"></label>
+            <label>Phone<input type="tel" name="phone" placeholder="Optional"></label>
+            <label>Project type
+                <select name="project_type">
+                    <option>Roads & Highways</option>
+                    <option>Bridges & Structures</option>
+                    <option>Water & Drainage</option>
+                    <option>Commercial Buildings</option>
+                </select>
+            </label>
+            <label>Message<textarea name="message" rows="6" required
+                    placeholder="Tell us about your project"></textarea></label>
+            <button type="submit" class="btn primary">Send message</button>
+            <p id="formStatus" class="muted" aria-live="polite"></p>
+        </form>
+
+        <h2>Office</h2>
+        <p>Replace this with your actual address and phone number. <br> Map: add Google Maps iframe here (see README).
+        </p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <a href="index.html" class="logo">SQ1<span class="dot">.</span></a>
+                <p class="muted">© <span id="year6"></span> Square One Infra</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

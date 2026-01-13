@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- index.html - Landing page with 3D parallax hero, services, featured projects, SEO tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Square One Infra — Infrastructure & Civil Engineering Experts</title>
+    <meta name="description"
+        content="Square One Infra delivers roads, bridges and water infrastructure with safety and sustainability. Browse projects and request a quote." />
+    <link rel="canonical" href="https://www.example.com/" />
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Square One Infra — Infrastructure & Civil Engineering Experts" />
+    <meta property="og:description"
+        content="Delivering roads, bridges, and water solutions with on-time delivery and measurable outcomes." />
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1526403224744-9a7b1f8f3f49?q=80&w=1200&auto=format&fit=crop" />
+    <meta property="og:url" content="https://www.example.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- JSON-LD LocalBusiness (edit placeholders) -->
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Square One Infra",
+    "image":"https://images.unsplash.com/photo-1526403224744-9a7b1f8f3f49?q=80&w=1200&auto=format&fit=crop",
+    "@id":"https://www.example.com/",
+    "url":"https://www.example.com/",
+    "telephone":"+91-XXXXXXXXXX",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Replace with street",
+      "addressLocality":"City",
+      "addressRegion":"State",
+      "postalCode":"000000",
+      "addressCountry":"IN"
+    },
+    "priceRange":"₹₹",
+    "description":"Civil infrastructure contractor — roads, bridges, and water management."
+  }
+  </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">SQ1<span class="dot">.</span></a>
+            <nav id="mainNav" class="nav" role="navigation" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html" class="cta">Request Quote</a>
+            </nav>
+            <button id="navToggle" class="nav-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+    </header>
+
+    <!-- 3D Parallax Hero: layered markup => layers transform on scroll & pointer -->
+    <main>
+        <section id="hero" class="hero-3d" aria-labelledby="hero-heading">
+            <div class="hero-3d__scene" id="scene">
+                <!-- background layer (distant) -->
+                <div class="layer layer--bg" data-depth="0.10"
+                    style="background-image:url('https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=2000&auto=format&fit=crop');"
+                    role="img" aria-label="Aerial view of highway construction"></div>
+                <!-- middle structures -->
+                <div class="layer layer--mid" data-depth="0.25">
+                    <img src="https://images.unsplash.com/photo-1542317854-7b1b2fa0a4d8?q=80&w=1600&auto=format&fit=crop"
+                        alt="construction equipment" loading="lazy">
+                </div>
+                <!-- foreground elements -->
+                <div class="layer layer--fg" data-depth="0.6">
+                    <img src="https://images.unsplash.com/photo-1526403224744-9a7b1f8f3f49?q=80&w=1400&auto=format&fit=crop"
+                        alt="workers on site" loading="lazy">
+                </div>
+                <!-- text layer fixed to center -->
+                <div class="layer layer--text" data-depth="0">
+                    <div class="hero-copy container">
+                        <h1 id="hero-heading">Infrastructure that connects communities.</h1>
+                        <p class="sub">Design • Build • Maintain — roads, bridges and smart commercial projects
+                            delivered on time.</p>
+                        <p class="hero-ctas">
+                            <a href="projects.html" class="btn primary">View Projects</a>
+                            <a href="contact.html" class="btn ghost">Request Quote</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-3d__hint">Move your mouse / scroll to see depth</div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="section services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="grid grid-3">
+                    <article class="card">
+                        <h3>Roads & Highways</h3>
+                        <p>Design, pavement rehabilitation and turnkey corridor delivery focused on longevity and low
+                            life-cycle cost.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Bridges & Structures</h3>
+                        <p>Bridge design, piling, and structural rehabilitation with quality control and HSE oversight.
+                        </p>
+                    </article>
+                    <article class="card">
+                        <h3>Water & Drainage</h3>
+                        <p>Stormwater design, interceptor pipelines and sustainable drainage systems to reduce flood
+                            risk.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured projects (expanded list, SEO-friendly article markup) -->
+        <section class="section projects" aria-labelledby="projects-heading">
+            <div class="container">
+                <h2 id="projects-heading">Featured Projects</h2>
+                <div class="projects-grid">
+                    <!-- project card 1 -->
+                    <article class="project-card">
+                        <a href="project-detail.html?slug=greenfield" class="project-link">
+                            <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1200&auto=format&fit=crop"
+                                alt="Greenfield Highway project" loading="lazy">
+                            <div class="project-meta">
+                                <h3>Greenfield Highway Upgrade</h3>
+                                <p class="muted">Highway • 12 km • Hyderabad</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- project card 2 -->
+                    <article class="project-card">
+                        <a href="project-detail.html?slug=riverside-plaza" class="project-link">
+                            <img src="https://images.unsplash.com/photo-1542317854-7b1b2fa0a4d8?q=80&w=1200&auto=format&fit=crop"
+                                alt="Riverside commercial plaza" loading="lazy">
+                            <div class="project-meta">
+                                <h3>Riverside Commercial Plaza</h3>
+                                <p class="muted">Commercial • 3 levels • Tenant fitouts</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- project card 3 -->
+                    <article class="project-card">
+                        <a href="project-detail.html?slug=sewer-interceptor" class="project-link">
+                            <img src="https://images.unsplash.com/photo-1526403224744-9a7b1f8f3f49?q=80&w=1200&auto=format&fit=crop"
+                                alt="Sewer interceptor" loading="lazy">
+                            <div class="project-meta">
+                                <h3>West End Sewage Interceptor</h3>
+                                <p class="muted">Utilities • 1.3 km • Pump stations</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Additional dummy projects to bulk content for SEO -->
+                    <article class="project-card small">
+                        <a href="project-detail.html?slug=urban-road-1" class="project-link">
+                            <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1200&auto=format&fit=crop"
+                                alt="Urban road" loading="lazy">
+                            <div class="project-meta">
+                                <h3>Urban Road Rehabilitation — Sector 9</h3>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="project-card small">
+                        <a href="project-detail.html?slug=bridge-connector" class="project-link">
+                            <img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1200&auto=format&fit=crop"
+                                alt="Bridge connector" loading="lazy">
+                            <div class="project-meta">
+                                <h3>Bridge Connector — East</h3>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="project-card small">
+                        <a href="project-detail.html?slug=drainage-upgrade" class="project-link">
+                            <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1200&auto=format&fit=crop"
+                                alt="Drainage upgrade" loading="lazy">
+                            <div class="project-meta">
+                                <h3>Drainage Upgrade — West Zone</h3>
+                            </div>
+                        </a>
+                    </article>
+
+                </div>
+                <div class="center"><a class="btn primary" href="projects.html">See all projects</a></div>
+            </div>
+        </section>
+
+        <!-- Trust and lead strip -->
+        <section class="section trust">
+            <div class="container trust-inner">
+                <div class="trust-logos">
+                    <div class="logo-box">Client A</div>
+                    <div class="logo-box">Client B</div>
+                    <div class="logo-box">Client C</div>
+                    <div class="logo-box">Cert: ISO9001</div>
+                </div>
+                <div class="lead-cta">
+                    <h3>Ready to discuss your project?</h3>
+                    <p>Request a quote or book a site visit — we typically respond within 48 hours.</p>
+                    <a href="contact.html" class="btn primary">Request Quote</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-inner">
+            <div>
+                <a href="index.html" class="logo">SQ1<span class="dot">.</span></a>
+                <p class="muted">© <span id="year"></span> Square One Infra — All rights reserved.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

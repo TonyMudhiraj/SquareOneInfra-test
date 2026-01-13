@@ -1,0 +1,554 @@
+:root {
+    --bg: #f6fbff;
+    --text: #0f172a;
+    --muted: #6b7280;
+    --primary: #0ea5e9;
+    --accent: #f47820;
+    --card: #ffffff;
+    --max: 1200px;
+    --pad: 20px;
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Inter, system-ui, Segoe UI, Roboto, Arial;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased
+}
+
+.container {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 var(--pad)
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0
+}
+
+.logo {
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--text)
+}
+
+.logo .dot {
+    color: var(--accent)
+}
+
+.nav a {
+    margin-left: 18px;
+    text-decoration: none;
+    color: var(--text)
+}
+
+.cta {
+    background: var(--accent);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    font-size: 20px
+}
+
+/* HERO 3D scene */
+.hero-3d {
+    position: relative;
+    overflow: hidden;
+    padding: 48px 0 120px
+}
+
+.hero-3d__scene {
+    position: relative;
+    height: 520px;
+    perspective: 1200px
+}
+
+.layer {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none
+}
+
+.layer img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(2, 6, 23, 0.3)
+}
+
+.layer--bg {
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6)
+}
+
+.layer--mid img {
+    transform: translateY(8px)
+}
+
+.layer--fg img {
+    transform: translateY(12px)
+}
+
+.layer--text {
+    position: relative;
+    pointer-events: auto
+}
+
+.hero-copy {
+    color: white;
+    text-align: left;
+    max-width: 900px;
+    padding: 40px
+}
+
+.hero-copy h1 {
+    font-size: 44px;
+    margin: 0 0 12px;
+    line-height: 1.02
+}
+
+.hero-copy .sub {
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 18px
+}
+
+.hero-3d__hint {
+    position: absolute;
+    right: 18px;
+    bottom: 8px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8)
+}
+
+/* sections */
+.section {
+    padding: 56px 0
+}
+
+.grid {
+    display: grid;
+    gap: 18px
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.card {
+    background: var(--card);
+    padding: 18px;
+    border-radius: var(--radius);
+    box-shadow: 0 12px 36px rgba(2, 6, 23, 0.06)
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600
+}
+
+.btn.primary {
+    background: var(--primary);
+    color: white
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    color: var(--text)
+}
+
+.muted {
+    color: var(--muted)
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px
+}
+
+.project-card {
+    background: var(--card);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06)
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block
+}
+
+.project-card .project-meta {
+    padding: 12px
+}
+
+.project-card.small img {
+    height: 120px
+}
+
+.trust-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px
+}
+
+.logo-box {
+    background: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(2, 6, 23, 0.04)
+}
+
+.lead-cta {
+    max-width: 520px
+}
+
+/* forms */
+.contact form {
+    display: grid;
+    gap: 12px;
+    max-width: 680px
+}
+
+.contact label {
+    display: block
+}
+
+.contact input,
+.contact textarea,
+.contact select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #e6eef7
+}
+
+/* accordion */
+.accordion .acc-toggle {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #eef6fb;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 6px
+}
+
+.acc-panel {
+    display: none;
+    padding: 12px;
+    background: transparent
+}
+
+/* footer */
+.site-footer {
+    height: 520px;
+    perspective: 1200px
+}
+
+.layer {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none
+}
+
+.layer img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(2, 6, 23, 0.3)
+}
+
+.layer--bg {
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6)
+}
+
+.layer--mid img {
+    transform: translateY(8px)
+}
+
+.layer--fg img {
+    transform: translateY(12px)
+}
+
+.layer--text {
+    position: relative;
+    pointer-events: auto
+}
+
+.hero-copy {
+    color: white;
+    text-align: left;
+    max-width: 900px;
+    padding: 40px
+}
+
+.hero-copy h1 {
+    font-size: 44px;
+    margin: 0 0 12px;
+    line-height: 1.02
+}
+
+.hero-copy .sub {
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 18px
+}
+
+.hero-3d__hint {
+    position: absolute;
+    right: 18px;
+    bottom: 8px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8)
+}
+
+/* sections */
+.section {
+    padding: 56px 0
+}
+
+.grid {
+    display: grid;
+    gap: 18px
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.card {
+    background: var(--card);
+    padding: 18px;
+    border-radius: var(--radius);
+    box-shadow: 0 12px 36px rgba(2, 6, 23, 0.06)
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600
+}
+
+.btn.primary {
+    background: var(--primary);
+    color: white
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    color: var(--text)
+}
+
+.muted {
+    color: var(--muted)
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px
+}
+
+.project-card {
+    background: var(--card);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06)
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block
+}
+
+.project-card .project-meta {
+    padding: 12px
+}
+
+.project-card.small img {
+    height: 120px
+}
+
+.trust-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px
+}
+
+.logo-box {
+    background: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(2, 6, 23, 0.04)
+}
+
+.lead-cta {
+    max-width: 520px
+}
+
+/* forms */
+.contact form {
+    display: grid;
+    gap: 12px;
+    max-width: 680px
+}
+
+.contact label {
+    display: block
+}
+
+.contact input,
+.contact textarea,
+.contact select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #e6eef7
+}
+
+/* accordion */
+.accordion .acc-toggle {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #eef6fb;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 6px
+}
+
+.acc-panel {
+    display: none;
+    padding: 12px;
+    background: transparent
+}
+
+/* footer */
+.site-footer {
+    border-top: 1px solid #e6eef7;
+    padding: 18px 0;
+    margin-top: 40px
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.footer-nav a {
+    margin-left: 12px;
+    text-decoration: none;
+    color: var(--muted)
+}
+
+/* responsive */
+@media (max-width:1000px) {
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .hero-3d__scene {
+        height: 420px
+    }
+}
+
+@media (max-width:640px) {
+    .grid-3 {
+        grid-template-columns: 1fr
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--card);
+        padding: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        gap: 16px;
+        z-index: 100;
+    }
+
+    .nav.active {
+        display: flex
+    }
+
+    .nav-toggle {
+        display: block
+    }
+
+    .hero-3d__scene {
+        height: 360px
+    }
+
+    .header-inner {
+        position: relative
+    }
+}
+
+/* focus states */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid rgba(14, 165, 233, 0.18);
+    outline-offset: 3px
+}
+
+/* small utilities */
+.center {
+    text-align: center
+}

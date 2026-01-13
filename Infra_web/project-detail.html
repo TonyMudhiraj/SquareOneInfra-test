@@ -1,0 +1,45 @@
+<!-- FILE: project-detail.html -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- project-detail.html - dynamic-ish template for project case studies; uses query param 'slug' to fill placeholder content via JS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Project — Square One Infra</title>
+    <meta name="description"
+        content="Project case study from Square One Infra. Detailed scope, timeline and outcomes." />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">SQ1<span class="dot">.</span></a>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html" class="cta">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section container project-detail" id="project-detail">
+        <!-- JS will populate the content based on slug -->
+        <article id="case"></article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <a href="index.html" class="logo">SQ1<span class="dot">.</span></a>
+                <p class="muted">© <span id="year2"></span> Square One Infra</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
